@@ -10,11 +10,12 @@ import ServiceManagement
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    private var statusItem: NSStatusItem!
-    private lazy var menu: NSMenu = {
+    fileprivate var statusItem: NSStatusItem!
+    fileprivate var preferences: ATGeneralController = ATGeneralController.init()
+    fileprivate lazy var menu: NSMenu = {
         let menu = NSMenu.init(title: "菜单")
         let launch = NSMenuItem.init(title: "开机自启", action: #selector(onClickLaunch(_:)), keyEquivalent: "")
-        if UserDefaults.standard.bool(forKey: Key.launchKey) {
+        if UserDefaults.standard.bool(forKey: Key.launch) {
             launch.state = .on
         } else {
             launch.state = .off
@@ -37,9 +38,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupStatusBar()
+        
+        let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
+        if user?.object(forKey: Key.appIcon) == nil {
+            user?.setValue(["0","1","2","3","4","5"], forKey: Key.appIcon)
+        }
+        if user?.object(forKey: Key.cutIcon) == nil {
+            user?.setValue("20.0", forKey: Key.cutIcon)
+        }
     }
     
-    private func setupStatusBar() {
+    fileprivate func setupStatusBar() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         let icon = NSImage.init(named: "status")
         icon?.isTemplate = false
@@ -51,13 +60,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = menu
     }
     
-    @objc private func onClickLaunch(_ item: NSMenuItem) {
+    @objc fileprivate func onClickLaunch(_ item: NSMenuItem) {
         if item.state == .off {
             item.state = .on
         } else {
             item.state = .off
         }
-        UserDefaults.standard.setValue(item.state == .on ? true : false, forKey: Key.launchKey)
+        UserDefaults.standard.setValue(item.state == .on ? true : false, forKey: Key.launch)
         let success = SMLoginItemSetEnabled(Key.helperBundleIdentifier as CFString, item.state == .on ? true : false)
         if success {
             print("启动项配置成功: ", item.state == .on ? true : false)
@@ -66,26 +75,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    @objc private func onClickPreferences() {
-        print("偏好设置")
+    @objc fileprivate func onClickPreferences() {
+        preferences.show()
     }
     
-    @objc private func onClickInstructions() {
-        
+    @objc fileprivate func onClickInstructions() {
+        guard let url = URL.init(string: "https://github.com/liyb93/aToolset") else {
+            return
+        }
+        NSWorkspace.shared.open(url)
     }
     
-    @objc private func onClickAbout() {
+    @objc fileprivate func onClickAbout() {
         NSApp.orderFrontStandardAboutPanel(nil)
     }
     
-    @objc private func onClickExit() {
+    @objc fileprivate func onClickExit() {
         NSApp.terminate(nil)
     }
 }
 
 extension AppDelegate {
-    fileprivate struct Key {
-        static let launchKey = "aToolset.launch.key"
+    struct Key {
+        static let launch = "aToolset.launch.key"
+        static let appIcon = "aToolset.preferences.appIcon.key"
+        static let cutIcon = "aToolset.preferences.cutIcon.key"
         static let helperBundleIdentifier = "com.liyb.aToolsetHelper"
     }
 }

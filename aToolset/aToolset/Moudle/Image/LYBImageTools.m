@@ -47,8 +47,8 @@
 //        [LYBPrintTools printError:@"图标类型错误, 如：[1,3,4]"];
         return;
     } else {
-        NSArray *sortArr = [typeArr filterMap:^BOOL(NSNumber *number, NSUInteger idx) {
-            return [number integerValue] > 6;
+        NSArray *sortArr = [typeArr filterMap:^BOOL(NSString *number, NSUInteger idx) {
+            return [number integerValue] > 6 || [number integerValue] < 0;
         }];
         if (sortArr.count > 0) {
 //            [LYBPrintTools printError:@"图标类型错误, 取值范围0~5"];
@@ -99,8 +99,8 @@
                 }
             }
             // 创建marketing
-            if ([typeArr containsObject:@(0)] || [typeArr containsObject:@(1)] || [typeArr containsObject:@(2)] || [typeArr containsObject:@(3)]) { // iphone || ipad || carplay || mac || watch
-                if ([typeArr containsObject:@(4)]) { // watch
+            if ([typeArr containsObject:@"0"] || [typeArr containsObject:@"1"] || [typeArr containsObject:@"2"] || [typeArr containsObject:@"3"]) { // iphone || ipad || carplay || mac || watch
+                if ([typeArr containsObject:@"4"]) { // watch
                     LYBIconIosModel *model = iconModel.marketing.watch;
                     NSArray *imageArr = [self cropIosIconWithImage:image outPath:outPath models:@[model]];
                     NSMutableArray *images = [NSMutableArray arrayWithArray:config[@"images"]];
@@ -118,10 +118,12 @@
                 NSString *iconPath = [self createIosWithPath:outPath];
                 [self saveIconConfigFileWithData:config path:iconPath];
             }
-            
             // 创建android图标
-            if ([typeArr containsObject:@(5)]) {
+            if ([typeArr containsObject:@"5"]) {
                 [self cropAndroidIconWithImage:image outPath:outPath models:iconModel.android];
+            } else {
+//                [[NSPasteboard generalPasteboard] clearContents];
+//                [[NSPasteboard generalPasteboard] setString:@"不存在" forType:NSPasteboardTypeString];
             }
 //            [LYBPrintTools printSuccess:@"图标生成完成"];
         } else {
@@ -150,6 +152,8 @@
         BOOL result = [imageData writeToFile:outPath atomically:YES];
         return result;
     } else {
+        [[NSPasteboard generalPasteboard] clearContents];
+        [[NSPasteboard generalPasteboard] setString:@"保存失败" forType:NSPasteboardTypeString];
         return NO;
     }
 }
@@ -209,6 +213,7 @@
         CGFloat size = [model.size floatValue];
         CGSize imgSize = CGSizeMake(size / 2.0, size / 2.0);
         NSImage *img = [image scaleToSize:imgSize];
+        
         [self saveImage:img outPath:path];
     }
 }

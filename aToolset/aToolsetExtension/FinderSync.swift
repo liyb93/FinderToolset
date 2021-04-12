@@ -17,6 +17,7 @@ class FinderSync: FIFinderSync {
         
         FIFinderSyncController.default().setBadgeImage(NSImage(named: NSImage.colorPanelName)!, label: "Status One" , forBadgeIdentifier: "One")
         FIFinderSyncController.default().setBadgeImage(NSImage(named: NSImage.cautionName)!, label: "Status Two", forBadgeIdentifier: "Two")
+        
     }
     
     // MARK: - Primary Finder Sync protocol methods
@@ -56,6 +57,9 @@ class FinderSync: FIFinderSync {
         let app = NSMenuItem.init(title: "生成App图标", action: #selector(generateAction(_:)), keyEquivalent: "")
         app.image = NSImage.init(named: "app")
         menu.addItem(app)
+        let clean = NSMenuItem.init(title: "清理XCode", action: #selector(cleanXCodeAction(_:)), keyEquivalent: "")
+        clean.image = NSImage.init(named: "clean")
+        menu.addItem(clean)
         return menu
     }
     
@@ -63,8 +67,12 @@ class FinderSync: FIFinderSync {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
+        guard let path = target?.path else {
+            return
+        }
+        
         for item in items {
-            LYBFileTools.plist(withInputPath: item.path, outPath: target?.path ?? "/Users/liyb/Desktop")
+            LYBFileTools.plist(withInputPath: item.path, outPath: path)
         }
     }
     
@@ -72,8 +80,12 @@ class FinderSync: FIFinderSync {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
 
+        guard let path = target?.path else {
+            return
+        }
+        
         for item in items {
-            LYBFileTools.json(withInputPath: item.path, outPath: target?.path ?? "/Users/liyb/Desktop")
+            LYBFileTools.json(withInputPath: item.path, outPath: path)
         }
     }
     
@@ -81,8 +93,12 @@ class FinderSync: FIFinderSync {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
+        guard let path = target?.path else {
+            return
+        }
+        
         for item in items {
-            LYBFileTools.xml(withInputPath: item.path, outPath: target?.path ?? "/Users/liyb/Desktop")
+            LYBFileTools.xml(withInputPath: item.path, outPath: path)
         }
     }
     
@@ -90,8 +106,18 @@ class FinderSync: FIFinderSync {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
+        let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
+        let cutIcon = user?.object(forKey: Key.cutIcon) as? String
+        let cut = Double(cutIcon ?? "20.0") ?? 20.0
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString("cut: \(cut)", forType: .string)
+        
+        guard let path = target?.path else {
+            return
+        }
+        
         for item in items {
-            LYBImageTools.imageTools(withInputPath: item.path, outPath: target?.path ?? "/Users/liyb/Desktop", radius: 50)
+            LYBImageTools.imageTools(withInputPath: item.path, outPath: path, radius: CGFloat(cut))
         }
     }
     
@@ -99,9 +125,42 @@ class FinderSync: FIFinderSync {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
+        let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
+        let app = user?.object(forKey: Key.appIcon) as? [String] ?? ["0","1","2","3","4","5"]
+        
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString("app: \(app)", forType: .string)
+        
+        guard let data = try? JSONSerialization.data(withJSONObject: app, options: .fragmentsAllowed), let types = String.init(data: data, encoding: .utf8), let path = target?.path else {
+            return
+        }
         for item in items {
-            LYBImageTools.imageToolsMakeIcon(with: item.path, outPath: target?.path ?? "/Users/liyb/Desktop", types: "[2]")
+            LYBImageTools.imageToolsMakeIcon(with: item.path, outPath: path, types: types)
+        }
+    }
+    
+    @IBAction func cleanXCodeAction(_ sender: AnyObject?) {
+        let path = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true)[0] as NSString
+        let range = path.range(of: "Library")
+        let library = path.substring(to: range.location + range.length)
+        
+        let xcode = library.appending("/Developer/Xcode/")
+        
+        let archive = xcode.appending("/Archives")
+        let data = xcode.appending("/DerivedData")
+        
+        if FileManager.default.fileExists(atPath: archive) {
+            try? FileManager.default.removeItem(atPath: archive)
+        }
+        if FileManager.default.fileExists(atPath: data) {
+            try? FileManager.default.removeItem(atPath: data)
         }
     }
 }
 
+extension FinderSync {
+    struct Key {
+        static let appIcon = "aToolset.preferences.appIcon.key"
+        static let cutIcon = "aToolset.preferences.cutIcon.key"
+    }
+}
