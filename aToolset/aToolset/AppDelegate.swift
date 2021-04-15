@@ -46,6 +46,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if user?.object(forKey: Key.cutIcon) == nil {
             user?.setValue("20.0", forKey: Key.cutIcon)
         }
+        if user?.object(forKey: Key.moveTrash) == nil {
+            user?.setValue(true, forKey: Key.moveTrash)
+        }
     }
     
     fileprivate func setupStatusBar() {
@@ -100,6 +103,7 @@ extension AppDelegate {
         static let launch = "aToolset.launch.key"
         static let appIcon = "aToolset.preferences.appIcon.key"
         static let cutIcon = "aToolset.preferences.cutIcon.key"
+        static let moveTrash = "aToolset.preferences.moveTrash.key"
         static let helperBundleIdentifier = "com.liyb.aToolsetHelper"
     }
 }

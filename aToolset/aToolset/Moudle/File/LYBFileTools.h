@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)jsonWithInputPath:(NSString *)inputPath outPath:(NSString *)outPath;
 + (void)xmlWithInputPath:(NSString *)inputPath outPath:(NSString *)outPath;
 
-+ (BOOL)isXML:(NSData *)data;
-+ (BOOL)isPlist:(NSData *)data;
++ (BOOL)isXMLWithURL:(NSURL *)url;
++ (BOOL)isPlistWithURL:(NSURL *)url;
 @end
 
 NS_ASSUME_NONNULL_END

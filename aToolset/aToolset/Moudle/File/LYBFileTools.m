@@ -146,6 +146,11 @@
     }
 }
 
++ (BOOL)isXMLWithURL:(NSURL *)url {
+    NSData *data = [[NSData alloc] initWithContentsOfFile:url.path];
+    return [self isXML:data];
+}
+
 + (BOOL)isXML:(NSData *)data {
     NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSString *temp = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -157,6 +162,11 @@
     }else {
         return NO;
     }
+}
+
++ (BOOL)isPlistWithURL:(NSURL *)url {
+    NSData *data = [[NSData alloc] initWithContentsOfFile:url.path];
+    return [self isPlist:data];
 }
 
 + (BOOL)isPlist:(NSData *)data {

@@ -14,6 +14,7 @@
                 <outlet property="iPadButton" destination="E5p-n0-My2" id="P8o-UO-aZV"/>
                 <outlet property="iPhoneButton" destination="fol-il-0m2" id="nzu-eb-qyE"/>
                 <outlet property="macButton" destination="ezZ-FS-udp" id="foQ-gg-YIg"/>
+                <outlet property="moveTrashButton" destination="lie-7g-gDH" id="dHo-OS-FHC"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="watchButton" destination="Xmf-RI-IyH" id="rM2-up-0Rf"/>
             </connections>
@@ -134,10 +135,20 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lie-7g-gDH">
+                    <rect key="frame" x="18" y="94" width="106" height="18"/>
+                    <buttonCell key="cell" type="check" title="移除到废纸篓" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jVM-n5-KHI">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onTrashAction:" target="-2" id="YST-VP-fL3"/>
+                    </connections>
+                </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X25-Q0-f3m">
-                    <rect key="frame" x="18" y="81" width="264" height="30"/>
-                    <textFieldCell key="cell" title="只会清理Archives与DerivedData文件夹下的数据" id="vS4-Pb-TB0">
-                        <font key="font" metaFont="system" size="12"/>
+                    <rect key="frame" x="18" y="55" width="264" height="30"/>
+                    <textFieldCell key="cell" title="不勾选将会直接删除文件，只会清理Archives与DerivedData文件夹下的数据" id="vS4-Pb-TB0">
+                        <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -151,12 +162,15 @@
                 <constraint firstItem="xcz-Dm-QmB" firstAttribute="top" secondItem="fol-il-0m2" secondAttribute="bottom" constant="10" id="DPa-7n-aWh"/>
                 <constraint firstItem="fol-il-0m2" firstAttribute="leading" secondItem="bwh-Wk-fNS" secondAttribute="leading" id="FGz-lL-puY"/>
                 <constraint firstItem="uOW-sc-t2J" firstAttribute="top" secondItem="k5R-6b-t9e" secondAttribute="bottom" constant="10" id="Pxw-0b-RF4"/>
+                <constraint firstItem="X25-Q0-f3m" firstAttribute="top" secondItem="lie-7g-gDH" secondAttribute="bottom" constant="10" id="QBW-m7-IeQ"/>
                 <constraint firstItem="2H4-4I-V4H" firstAttribute="top" secondItem="Xmf-RI-IyH" secondAttribute="top" id="RhR-s0-HYS"/>
                 <constraint firstItem="k5R-6b-t9e" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="TKz-yO-NCD"/>
+                <constraint firstItem="lie-7g-gDH" firstAttribute="leading" secondItem="qfc-8z-xl9" secondAttribute="leading" id="WNe-9q-ARv"/>
                 <constraint firstAttribute="trailing" secondItem="X25-Q0-f3m" secondAttribute="trailing" constant="20" id="ZTf-Bn-CEy"/>
                 <constraint firstItem="ezZ-FS-udp" firstAttribute="leading" secondItem="E5p-n0-My2" secondAttribute="trailing" constant="10" id="Zbq-4q-dLq"/>
                 <constraint firstItem="E5p-n0-My2" firstAttribute="leading" secondItem="fol-il-0m2" secondAttribute="trailing" constant="10" id="bZN-yr-u0W"/>
                 <constraint firstItem="2H4-4I-V4H" firstAttribute="leading" secondItem="Xmf-RI-IyH" secondAttribute="trailing" constant="10" id="cpG-rp-kx5"/>
+                <constraint firstItem="lie-7g-gDH" firstAttribute="top" secondItem="qfc-8z-xl9" secondAttribute="bottom" constant="10" id="dYl-0S-t5K"/>
                 <constraint firstItem="If7-zC-Jhz" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="dZf-Da-4Iu"/>
                 <constraint firstItem="Xmf-RI-IyH" firstAttribute="top" secondItem="xcz-Dm-QmB" secondAttribute="top" id="gaZ-LI-LCu"/>
                 <constraint firstItem="Xmf-RI-IyH" firstAttribute="leading" secondItem="xcz-Dm-QmB" secondAttribute="trailing" constant="10" id="gtd-hh-RDw"/>
@@ -166,7 +180,6 @@
                 <constraint firstItem="E5p-n0-My2" firstAttribute="top" secondItem="fol-il-0m2" secondAttribute="top" id="qDx-TI-IVv"/>
                 <constraint firstAttribute="trailing" secondItem="qfc-8z-xl9" secondAttribute="trailing" constant="20" id="rHd-0Z-ebh"/>
                 <constraint firstItem="fol-il-0m2" firstAttribute="top" secondItem="bwh-Wk-fNS" secondAttribute="bottom" constant="10" id="tJ0-bs-d6T"/>
-                <constraint firstItem="X25-Q0-f3m" firstAttribute="top" secondItem="qfc-8z-xl9" secondAttribute="bottom" constant="10" id="tgU-PZ-DCT"/>
                 <constraint firstItem="X25-Q0-f3m" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="tiw-BQ-ctt"/>
                 <constraint firstItem="k5R-6b-t9e" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="v4C-XL-e8R"/>
                 <constraint firstAttribute="trailing" secondItem="If7-zC-Jhz" secondAttribute="trailing" id="vpt-7d-S58"/>

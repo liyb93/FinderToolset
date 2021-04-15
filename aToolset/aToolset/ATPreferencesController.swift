@@ -14,6 +14,7 @@ class ATPreferencesController: NSViewController, PreferencePane {
     
     override var nibName: NSNib.Name? { "ATPreferencesController" }
     
+    @IBOutlet weak var moveTrashButton: NSButton!
     @IBOutlet weak var cutComboBox: NSComboBox!
     @IBOutlet weak var iPhoneButton: NSButton!
     @IBOutlet weak var iPadButton: NSButton!
@@ -24,12 +25,14 @@ class ATPreferencesController: NSViewController, PreferencePane {
     
     fileprivate var appIcon: [String] = []
     fileprivate var cutIcon: String = "20.0"
+    fileprivate var moveTrash: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
         appIcon = user?.object(forKey: AppDelegate.Key.appIcon) as? [String] ?? ["0","1","2","3","4","5"]
         cutIcon = user?.object(forKey: AppDelegate.Key.cutIcon) as? String ?? "20.0"
+        moveTrash = user?.bool(forKey: AppDelegate.Key.moveTrash) ?? true
         
         cutComboBox.stringValue = cutIcon
         iPhoneButton.state = appIcon.contains("0") ? .on : .off
@@ -38,6 +41,8 @@ class ATPreferencesController: NSViewController, PreferencePane {
         carPlayButton.state = appIcon.contains("3") ? .on : .off
         watchButton.state = appIcon.contains("4") ? .on : .off
         androidButton.state = appIcon.contains("5") ? .on : .off
+        
+        moveTrashButton.state = moveTrash ? .on : .off
         
         cutComboBox.window?.makeFirstResponder(nil)
     }
@@ -153,6 +158,11 @@ class ATPreferencesController: NSViewController, PreferencePane {
         let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
         user?.setValue(appIcon, forKey: AppDelegate.Key.appIcon)
         print("修改后: \(appIcon)")
+    }
+    
+    @IBAction func onTrashAction(_ sender: NSButton) {
+        let user = UserDefaults.init(suiteName: "group.com.liyb.Toolset")
+        user?.setValue(sender.state == .on ? true : false, forKey: AppDelegate.Key.moveTrash)
     }
 }
 
