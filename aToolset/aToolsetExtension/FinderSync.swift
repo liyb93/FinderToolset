@@ -10,10 +10,12 @@ import FinderSync
 class FinderSync: FIFinderSync {
 
     var myFolderURL = URL(fileURLWithPath: "/")
+    var runner: TerminalRunner!
     
     override init() {
         super.init()
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
+        runner = TerminalRunner.init()
     }
     
     // MARK: - Menu and toolbar item support
@@ -30,6 +32,14 @@ class FinderSync: FIFinderSync {
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
+        return createMenu()
+    }
+}
+
+extension FinderSync {
+    fileprivate func createMenu() -> NSMenu {
+        let items = FIFinderSyncController.default().selectedItemURLs() ?? []
+        
         let menu = NSMenu(title: "")
         let file = NSMenuItem.init(title: "新建文件", action: nil, keyEquivalent: "")
         file.image = NSImage.init(named: "newFile")
@@ -39,31 +49,67 @@ class FinderSync: FIFinderSync {
         file.submenu?.addItem(.init(title: "Plist", action: #selector(createPlistFile(_:)), keyEquivalent: ""))
         file.submenu?.addItem(.init(title: "Markdown", action: #selector(createMarkdownFile(_:)), keyEquivalent: ""))
         menu.addItem(file)
-        let clean = NSMenuItem.init(title: "清理XCode", action: #selector(cleanXCodeAction(_:)), keyEquivalent: "")
+        let clean = NSMenuItem.init(title: "清理Xcode", action: #selector(cleanXCodeAction(_:)), keyEquivalent: "")
         clean.image = NSImage.init(named: "clean")
         menu.addItem(clean)
         let copy = NSMenuItem.init(title: "拷贝路径", action: #selector(copyCurrentPath(_:)), keyEquivalent: "")
         copy.image = NSImage.init(named: "copy")
         menu.addItem(copy)
-        let plist = NSMenuItem.init(title: "转plist", action: #selector(toPlistAction(_:)), keyEquivalent: "")
-        plist.image = NSImage.init(named: "plist")
-        menu.addItem(plist)
-        let json = NSMenuItem.init(title: "转json", action: #selector(toJsonAction(_:)), keyEquivalent: "")
-        json.image = NSImage.init(named: "json")
-        menu.addItem(json)
-        let xml = NSMenuItem.init(title: "转xml", action: #selector(toXmlAction(_:)), keyEquivalent: "")
-        xml.image = NSImage.init(named: "xml")
-        menu.addItem(xml)
-        let cut = NSMenuItem.init(title: "切圆角", action: #selector(cutAction(_:)), keyEquivalent: "")
-        cut.image = NSImage.init(named: "cut")
-        menu.addItem(cut)
-        let app = NSMenuItem.init(title: "生成App图标", action: #selector(generateAction(_:)), keyEquivalent: "")
-        app.image = NSImage.init(named: "app")
-        menu.addItem(app)
+        
+        let iTerms = (LSCopyApplicationURLsForBundleIdentifier("com.googlecode.iterm2" as CFString, nil)?.takeRetainedValue() as? [Any]) ?? []
+        if iTerms.count > 0 {   // 是否安装iTerm
+            let iTerm = NSMenuItem.init(title: "iTerm", action: #selector(openITerm(_:)), keyEquivalent: "")
+            iTerm.image = NSImage.init(named: "iterm")
+            menu.addItem(iTerm)
+        }
+        
+        let terms = (LSCopyApplicationURLsForBundleIdentifier("com.apple.Terminal" as CFString, nil)?.takeRetainedValue() as? [Any]) ?? []
+        if terms.count > 0 {   // 是否安装Terminal
+            let Terminal = NSMenuItem.init(title: "Terminal", action: #selector(openTerminal(_:)), keyEquivalent: "")
+            Terminal.image = NSImage.init(named: "terminal")
+            menu.addItem(Terminal)
+        }
+        
+        let hypers = (LSCopyApplicationURLsForBundleIdentifier("co.zeit.hyper" as CFString, nil)?.takeRetainedValue() as? [Any]) ?? []
+        if hypers.count > 0 {   // 是否安装Hyper
+            let hyper = NSMenuItem.init(title: "Hyper", action: #selector(openHyper(_:)), keyEquivalent: "")
+            hyper.image = NSImage.init(named: "hyper")
+            menu.addItem(hyper)
+        }
+        
+        if items.count == 1, let first = items.first {  // 是否选中的是文件
+            var isDirectory: ObjCBool = false
+            if FileManager.default.fileExists(atPath: first.path, isDirectory: &isDirectory), !isDirectory.boolValue {
+                let plist = NSMenuItem.init(title: "转plist", action: #selector(toPlistAction(_:)), keyEquivalent: "")
+                plist.image = NSImage.init(named: "plist")
+                menu.addItem(plist)
+                let json = NSMenuItem.init(title: "转json", action: #selector(toJsonAction(_:)), keyEquivalent: "")
+                json.image = NSImage.init(named: "json")
+                menu.addItem(json)
+                let xml = NSMenuItem.init(title: "转xml", action: #selector(toXmlAction(_:)), keyEquivalent: "")
+                xml.image = NSImage.init(named: "xml")
+                menu.addItem(xml)
+                let cut = NSMenuItem.init(title: "切圆角", action: #selector(cutAction(_:)), keyEquivalent: "")
+                cut.image = NSImage.init(named: "cut")
+                menu.addItem(cut)
+                let app = NSMenuItem.init(title: "生成App图标", action: #selector(generateAction(_:)), keyEquivalent: "")
+                app.image = NSImage.init(named: "app")
+                menu.addItem(app)
+            }
+        }
         return menu
     }
     
-    @IBAction func toPlistAction(_ sender: AnyObject?) {
+    fileprivate func run(fileName: String) {
+        guard let targetedUrl = FIFinderSyncController.default().targetedURL() else {
+          return
+        }
+        runner.run(path: targetedUrl.path, fileName: fileName)
+    }
+}
+
+extension FinderSync {
+    @objc fileprivate func toPlistAction(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
@@ -76,7 +122,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func toJsonAction(_ sender: AnyObject?) {
+    @objc fileprivate func toJsonAction(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
 
@@ -89,7 +135,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func toXmlAction(_ sender: AnyObject?) {
+    @objc fileprivate func toXmlAction(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
@@ -102,7 +148,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func cutAction(_ sender: AnyObject?) {
+    @objc fileprivate func cutAction(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
@@ -121,7 +167,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func generateAction(_ sender: AnyObject?) {
+    @objc fileprivate func generateAction(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         
@@ -139,7 +185,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func cleanXCodeAction(_ sender: AnyObject?) {
+    @objc fileprivate func cleanXCodeAction(_ sender: AnyObject?) {
         let path = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true)[0] as NSString
         let range = path.range(of: "Library")
         let library = path.substring(to: range.location + range.length)
@@ -173,7 +219,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func createTxtFile(_ sender: AnyObject?) {
+    @objc fileprivate func createTxtFile(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         guard let targetPath = target?.path else {
             return
@@ -190,7 +236,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func createRtfFile(_ sender: AnyObject?) {
+    @objc fileprivate func createRtfFile(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         guard let targetPath = target?.path else {
             return
@@ -207,7 +253,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func createPlistFile(_ sender: AnyObject?) {
+    @objc fileprivate func createPlistFile(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         guard let targetPath = target?.path else {
             return
@@ -225,7 +271,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func createMarkdownFile(_ sender: AnyObject?) {
+    @objc fileprivate func createMarkdownFile(_ sender: AnyObject?) {
         let target = FIFinderSyncController.default().targetedURL()
         guard let targetPath = target?.path else {
             return
@@ -242,7 +288,7 @@ class FinderSync: FIFinderSync {
         }
     }
     
-    @IBAction func copyCurrentPath(_ sender: AnyObject?) {
+    @objc fileprivate func copyCurrentPath(_ sender: AnyObject?) {
         let items = FIFinderSyncController.default().selectedItemURLs() ?? []
         let target = FIFinderSyncController.default().targetedURL()
         var path = target?.path
@@ -257,6 +303,18 @@ class FinderSync: FIFinderSync {
         }
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(p, forType: .string)
+    }
+    
+    @objc fileprivate func openITerm(_ sender: AnyObject?) {
+        run(fileName: "iterm")
+    }
+    
+    @objc fileprivate func openTerminal(_ sender: AnyObject?) {
+        run(fileName: "terminal")
+    }
+    
+    @objc fileprivate func openHyper(_ sender: AnyObject?) {
+        run(fileName: "hyper")
     }
 }
 

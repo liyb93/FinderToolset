@@ -49,6 +49,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if user?.object(forKey: Key.moveTrash) == nil {
             user?.setValue(true, forKey: Key.moveTrash)
         }
+        
+        
+        
     }
     
     fileprivate func setupStatusBar() {

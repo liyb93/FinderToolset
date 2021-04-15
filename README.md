@@ -15,6 +15,7 @@ aToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才�
 - Xcode缓存清理，只会清理`DerivedData`与`Archives`路径下的文件
 - 新建文件，支持`txt`、`rtf`、`plist`、`markdown`文件类型
 - 拷贝路径
+- 打开终端：支持`iTerm2`、`Terminal`、`Hyper`
 
 ## 安装说明
 
@@ -46,6 +47,8 @@ aToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才�
 
 - 拷贝路径：拷贝当前路径或选择文件的路径，支持多选
 
+- 打开终端：从Finder快速打开终端
+
 ## 常见问题
 
 - 勾选扩展后，右键菜单未显示。
@@ -55,3 +58,7 @@ aToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才�
   - 重启电脑
 
   
+
+## 参考
+
+[FinderGo:从Finder快速打开终端](https://github.com/onmyway133/FinderGo)
