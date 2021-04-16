@@ -1,9 +1,10 @@
-# aToolset
+# FinderToolset
+
 ## 介绍
 
-aToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才能使用[LYBTools](https://github.com/liyb93/LYBTools.git), 所有就对[LYBTools](https://github.com/liyb93/LYBTools.git)进行修改。
+FinderToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才能使用[LYBTools](https://github.com/liyb93/LYBTools.git), 所有就对[LYBTools](https://github.com/liyb93/LYBTools.git)进行修改。
 
-![preview](https://raw.githubusercontent.com/liyb93/aToolset/master/preview.png)
+![preview](https://raw.githubusercontent.com/liyb93/FinderToolset/master/preview.png)
 
 ## 功能列表
 
@@ -20,7 +21,7 @@ aToolset是一款`Finder`扩展插件，为了解决每次都要打开终端才�
 ## 安装说明
 
 1. 下载项目，进行编译，把生成app移动到应用程序中。
-2. 打开`设置`->`扩展`->`Finder扩展`->`aToolset`。
+2. 打开`设置`->`扩展`->`Finder扩展`->`FinderToolsetExtension`。
 3. 最后，选择需要处理的文件就可以尽情的使用我们的小工具了🥳。
 
 ## 使用说明

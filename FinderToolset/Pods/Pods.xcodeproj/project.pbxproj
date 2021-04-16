@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052DFF48B54864D445EC884543F61EA8 /* Preferences-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A54183CC9D7653C8A15BEF2422E42798 /* Preferences-dummy.m */; };
+		362D7B922B9C2C323C508FCB12725CF4 /* Pods-FinderToolsetExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9701728A63E4E0854E039B157171FFCC /* Pods-FinderToolsetExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		391F3E88DD91504EA4715083D7BE0BA2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		3DD72EA88FE33C43438AD2C51798E7A8 /* Pods-FinderToolsetHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C950C6B40F3482DC6F3D1F91C748A1 /* Pods-FinderToolsetHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49F0E59AADFB6E9B91E5AF2CD00E7F3F /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8AE207B2D1E494E12C7DA0B3014F43 /* util.swift */; };
+		60D6AC3B99212F040A4BD045B1B7DCE3 /* PreferencesStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B110EECD007C7F2C8B1ECF16B486E /* PreferencesStyle.swift */; };
+		73D8666B795CEA8E4C14717D8F8A963B /* SegmentedControlStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AADAF1085433BD2593B89953F5C1F9 /* SegmentedControlStyleViewController.swift */; };
+		74A325B54E70CDB34367DF5ACE33D146 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C900023F7121E59CEF3399D4DC0300 /* Localization.swift */; };
+		7FD23DD8147E1586EF1B121F368855F2 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842B680C231D4EB00E826E55DCE923D /* PreferencesWindowController.swift */; };
+		85546503D142D6BDBB0ED6044DB69305 /* Pods-FinderToolset-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA7292FF7B60D96CC48C6EF49A8485 /* Pods-FinderToolset-dummy.m */; };
+		86FEB1A2826393B1B6F3650EE778C5EC /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3821CB929F17D9612BD947B55746C515 /* PreferencesTabViewController.swift */; };
+		877EC615BF32B9C9D516E7E0BBE4ECB9 /* Pods-FinderToolset-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5313F73724747E1BC2D34EA92FC1AC3 /* Pods-FinderToolset-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94A9243F5D71B9A7F921AFF55B41D579 /* Pods-FinderToolsetExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1258EA67156D80F6AA269646AC1D6467 /* Pods-FinderToolsetExtension-dummy.m */; };
+		9620CFD7DD4876E61B96B0159377215C /* ToolbarItemStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F1007902BCF855D0BBABE94559EC7 /* ToolbarItemStyleViewController.swift */; };
+		A6543098065FB7C29E24719462ED3CD1 /* UserInteractionPausableWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D1FF223B174BAC239A51786DEF1363 /* UserInteractionPausableWindow.swift */; };
+		CAC3EF7CB19748537B9425599875DCAF /* Pods-FinderToolsetHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F559AAF26D2A5DEB5DD86674B0FD5282 /* Pods-FinderToolsetHelper-dummy.m */; };
+		D4C5685605AAB571B346E92AA982E4AD /* Preferences-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7840E70F943DE8F0FB52313F42972D /* Preferences-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8BFAE7A8C3FA27527DEF74C1BC00479 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		E0E3CE66468295446E31F28372866456 /* PreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E10B859717587910C359AC70AA36C /* PreferencePane.swift */; };
+		EDA2462B04685D2BBC46D91BE7564B9C /* PreferencesStyleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF47F242C4D393D96D91DC81C6A9B02 /* PreferencesStyleController.swift */; };
+		F459DB6DE5B5170EC4648779C99574FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		FB6819630D606573BC568A4CD7F2C9FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF9026949B0B9BEFBC3E149A99149525 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 080990A33C8E049DC557762B0B4240DB;
+			remoteInfo = Preferences;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0385EDA686F3EFD9BD7947F32B75DE04 /* Pods-FinderToolsetExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FinderToolsetExtension.modulemap"; sourceTree = "<group>"; };
+		1258EA67156D80F6AA269646AC1D6467 /* Pods-FinderToolsetExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FinderToolsetExtension-dummy.m"; sourceTree = "<group>"; };
+		1AB0DBD3207F5955A90C6DF19BD04857 /* Pods-FinderToolset-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FinderToolset-frameworks.sh"; sourceTree = "<group>"; };
+		1FFA7292FF7B60D96CC48C6EF49A8485 /* Pods-FinderToolset-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FinderToolset-dummy.m"; sourceTree = "<group>"; };
+		20C900023F7121E59CEF3399D4DC0300 /* Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Localization.swift; path = Sources/Preferences/Localization.swift; sourceTree = "<group>"; };
+		22C45D3C3AE285F3392206F4B3726C68 /* Pods-FinderToolset-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolset-acknowledgements.plist"; sourceTree = "<group>"; };
+		23FCA9B300D16A12B747C873CC4D1DF9 /* Pods-FinderToolset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolset.debug.xcconfig"; sourceTree = "<group>"; };
+		2CDF3C3D491E34C8DA5B9CE3391070B3 /* Pods-FinderToolsetHelper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolsetHelper-Info.plist"; sourceTree = "<group>"; };
+		2F7840E70F943DE8F0FB52313F42972D /* Preferences-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Preferences-umbrella.h"; sourceTree = "<group>"; };
+		3821CB929F17D9612BD947B55746C515 /* PreferencesTabViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesTabViewController.swift; path = Sources/Preferences/PreferencesTabViewController.swift; sourceTree = "<group>"; };
+		42C4664FE1E355EC842139F851C05452 /* Pods-FinderToolsetExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FinderToolsetExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		514B110EECD007C7F2C8B1ECF16B486E /* PreferencesStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesStyle.swift; path = Sources/Preferences/PreferencesStyle.swift; sourceTree = "<group>"; };
+		52BE1A545D5C1DA067B99362F45DA352 /* Pods-FinderToolsetHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolsetHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		5CAA50AAF65356CCEFECEB3B8C5AC290 /* Pods-FinderToolsetExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolsetExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		5F754CB6D4D2D1AE591957B01F416126 /* Preferences.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Preferences.debug.xcconfig; sourceTree = "<group>"; };
+		646261CB96A42A0AB7311ACAC34F7D38 /* Preferences-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Preferences-prefix.pch"; sourceTree = "<group>"; };
+		67FF999EC4497CED63C39D878F71FC9A /* Preferences-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Preferences-Info.plist"; sourceTree = "<group>"; };
+		6A115D5F73B04DD7F1B7818EDD9B2EF3 /* Preferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Preferences.framework; path = Preferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C03BE4B1D7B1E5FF61B9A2B76840974 /* Pods-FinderToolsetHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolsetHelper.release.xcconfig"; sourceTree = "<group>"; };
+		6DF47F242C4D393D96D91DC81C6A9B02 /* PreferencesStyleController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesStyleController.swift; path = Sources/Preferences/PreferencesStyleController.swift; sourceTree = "<group>"; };
+		71C950C6B40F3482DC6F3D1F91C748A1 /* Pods-FinderToolsetHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FinderToolsetHelper-umbrella.h"; sourceTree = "<group>"; };
+		7459ABF620F341E5BBD756407C5C4740 /* Pods-FinderToolsetExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolsetExtension-Info.plist"; sourceTree = "<group>"; };
+		7CF1CB9423DC135CD3AB81F930894C14 /* Pods_FinderToolsetHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FinderToolsetHelper.framework; path = "Pods-FinderToolsetHelper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9701728A63E4E0854E039B157171FFCC /* Pods-FinderToolsetExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FinderToolsetExtension-umbrella.h"; sourceTree = "<group>"; };
+		9934F98B739DAAC47B4375C17161259C /* Pods-FinderToolset-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FinderToolset-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C7DA445F3CA652D0BA1F5E36D9418D2 /* Pods-FinderToolsetHelper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolsetHelper-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DAE35F22ED003012BDD37C72E61EF4A /* Pods-FinderToolsetHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FinderToolsetHelper.modulemap"; sourceTree = "<group>"; };
+		9F203EC75892A7DFB04C47F6F181A148 /* Pods-FinderToolsetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolsetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		A1E97780FCDB9DCD28F461E05EB67228 /* Pods-FinderToolset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolset.release.xcconfig"; sourceTree = "<group>"; };
+		A23AAEF6A8AD900542016634C77FB0F8 /* Pods-FinderToolsetHelper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FinderToolsetHelper-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A54183CC9D7653C8A15BEF2422E42798 /* Preferences-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Preferences-dummy.m"; sourceTree = "<group>"; };
+		A7D1FF223B174BAC239A51786DEF1363 /* UserInteractionPausableWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionPausableWindow.swift; path = Sources/Preferences/UserInteractionPausableWindow.swift; sourceTree = "<group>"; };
+		AE6F1007902BCF855D0BBABE94559EC7 /* ToolbarItemStyleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToolbarItemStyleViewController.swift; path = Sources/Preferences/ToolbarItemStyleViewController.swift; sourceTree = "<group>"; };
+		B5313F73724747E1BC2D34EA92FC1AC3 /* Pods-FinderToolset-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FinderToolset-umbrella.h"; sourceTree = "<group>"; };
+		BF8AE207B2D1E494E12C7DA0B3014F43 /* util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = util.swift; path = Sources/Preferences/util.swift; sourceTree = "<group>"; };
+		C22428C113A5A7698B43A3E71F172A9F /* Pods_FinderToolset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FinderToolset.framework; path = "Pods-FinderToolset.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF40890AD24649F98C9AAF6055FA3C5 /* Pods_FinderToolsetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FinderToolsetExtension.framework; path = "Pods-FinderToolsetExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AADAF1085433BD2593B89953F5C1F9 /* SegmentedControlStyleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedControlStyleViewController.swift; path = Sources/Preferences/SegmentedControlStyleViewController.swift; sourceTree = "<group>"; };
+		D5D59EC48697F8D1419A8ABB00815018 /* Preferences.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Preferences.modulemap; sourceTree = "<group>"; };
+		D7D2F82BCADFA9A89C93F1529696DB4C /* Preferences.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Preferences.release.xcconfig; sourceTree = "<group>"; };
+		DB74CB14323B5D64273E74337A1E1EA0 /* Pods-FinderToolsetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinderToolsetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E7D0FC473D0636A42DB3B8E3BC71D81F /* Pods-FinderToolset-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinderToolset-Info.plist"; sourceTree = "<group>"; };
+		E842B680C231D4EB00E826E55DCE923D /* PreferencesWindowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencesWindowController.swift; path = Sources/Preferences/PreferencesWindowController.swift; sourceTree = "<group>"; };
+		ED7E10B859717587910C359AC70AA36C /* PreferencePane.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferencePane.swift; path = Sources/Preferences/PreferencePane.swift; sourceTree = "<group>"; };
+		F38CB7BD1E65D038B6704E416515771D /* Pods-FinderToolset.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FinderToolset.modulemap"; sourceTree = "<group>"; };
+		F559AAF26D2A5DEB5DD86674B0FD5282 /* Pods-FinderToolsetHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FinderToolsetHelper-dummy.m"; sourceTree = "<group>"; };
+		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83DCC675CAE4EB48F677A6AA07A652C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F459DB6DE5B5170EC4648779C99574FE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C21761A07851813618236C6C2F0C891E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				391F3E88DD91504EA4715083D7BE0BA2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDE96FCF2B4A45A0105FD563B16695D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BFAE7A8C3FA27527DEF74C1BC00479 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC11C8260FBC26CD24DB05492FE52A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6819630D606573BC568A4CD7F2C9FC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D0E5350F11B0C7BF9206778D660714 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				20C900023F7121E59CEF3399D4DC0300 /* Localization.swift */,
+				ED7E10B859717587910C359AC70AA36C /* PreferencePane.swift */,
+				514B110EECD007C7F2C8B1ECF16B486E /* PreferencesStyle.swift */,
+				6DF47F242C4D393D96D91DC81C6A9B02 /* PreferencesStyleController.swift */,
+				3821CB929F17D9612BD947B55746C515 /* PreferencesTabViewController.swift */,
+				E842B680C231D4EB00E826E55DCE923D /* PreferencesWindowController.swift */,
+				D1AADAF1085433BD2593B89953F5C1F9 /* SegmentedControlStyleViewController.swift */,
+				AE6F1007902BCF855D0BBABE94559EC7 /* ToolbarItemStyleViewController.swift */,
+				A7D1FF223B174BAC239A51786DEF1363 /* UserInteractionPausableWindow.swift */,
+				BF8AE207B2D1E494E12C7DA0B3014F43 /* util.swift */,
+				E5681698000E14F1312E754960DDF996 /* Support Files */,
+			);
+			name = Preferences;
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		096B924551EAD2EB14440C7673273596 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55B821044490B4E9A396AF1818E5C9B2 /* Pods-FinderToolset */,
+				E49642C23F17C982A38424D19810B7D1 /* Pods-FinderToolsetExtension */,
+				C256F27E15E8D38824A863CE054EF0C8 /* Pods-FinderToolsetHelper */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		55B821044490B4E9A396AF1818E5C9B2 /* Pods-FinderToolset */ = {
+			isa = PBXGroup;
+			children = (
+				F38CB7BD1E65D038B6704E416515771D /* Pods-FinderToolset.modulemap */,
+				9934F98B739DAAC47B4375C17161259C /* Pods-FinderToolset-acknowledgements.markdown */,
+				22C45D3C3AE285F3392206F4B3726C68 /* Pods-FinderToolset-acknowledgements.plist */,
+				1FFA7292FF7B60D96CC48C6EF49A8485 /* Pods-FinderToolset-dummy.m */,
+				1AB0DBD3207F5955A90C6DF19BD04857 /* Pods-FinderToolset-frameworks.sh */,
+				E7D0FC473D0636A42DB3B8E3BC71D81F /* Pods-FinderToolset-Info.plist */,
+				B5313F73724747E1BC2D34EA92FC1AC3 /* Pods-FinderToolset-umbrella.h */,
+				23FCA9B300D16A12B747C873CC4D1DF9 /* Pods-FinderToolset.debug.xcconfig */,
+				A1E97780FCDB9DCD28F461E05EB67228 /* Pods-FinderToolset.release.xcconfig */,
+			);
+			name = "Pods-FinderToolset";
+			path = "Target Support Files/Pods-FinderToolset";
+			sourceTree = "<group>";
+		};
+		B98614185C407BA8D396803767DC1621 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03D0E5350F11B0C7BF9206778D660714 /* Preferences */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C256F27E15E8D38824A863CE054EF0C8 /* Pods-FinderToolsetHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE35F22ED003012BDD37C72E61EF4A /* Pods-FinderToolsetHelper.modulemap */,
+				A23AAEF6A8AD900542016634C77FB0F8 /* Pods-FinderToolsetHelper-acknowledgements.markdown */,
+				9C7DA445F3CA652D0BA1F5E36D9418D2 /* Pods-FinderToolsetHelper-acknowledgements.plist */,
+				F559AAF26D2A5DEB5DD86674B0FD5282 /* Pods-FinderToolsetHelper-dummy.m */,
+				2CDF3C3D491E34C8DA5B9CE3391070B3 /* Pods-FinderToolsetHelper-Info.plist */,
+				71C950C6B40F3482DC6F3D1F91C748A1 /* Pods-FinderToolsetHelper-umbrella.h */,
+				52BE1A545D5C1DA067B99362F45DA352 /* Pods-FinderToolsetHelper.debug.xcconfig */,
+				6C03BE4B1D7B1E5FF61B9A2B76840974 /* Pods-FinderToolsetHelper.release.xcconfig */,
+			);
+			name = "Pods-FinderToolsetHelper";
+			path = "Target Support Files/Pods-FinderToolsetHelper";
+			sourceTree = "<group>";
+		};
+		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
+				B98614185C407BA8D396803767DC1621 /* Pods */,
+				CFC712A0E1EE7895F78324075BC919ED /* Products */,
+				096B924551EAD2EB14440C7673273596 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFC712A0E1EE7895F78324075BC919ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C22428C113A5A7698B43A3E71F172A9F /* Pods_FinderToolset.framework */,
+				CEF40890AD24649F98C9AAF6055FA3C5 /* Pods_FinderToolsetExtension.framework */,
+				7CF1CB9423DC135CD3AB81F930894C14 /* Pods_FinderToolsetHelper.framework */,
+				6A115D5F73B04DD7F1B7818EDD9B2EF3 /* Preferences.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E49642C23F17C982A38424D19810B7D1 /* Pods-FinderToolsetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0385EDA686F3EFD9BD7947F32B75DE04 /* Pods-FinderToolsetExtension.modulemap */,
+				42C4664FE1E355EC842139F851C05452 /* Pods-FinderToolsetExtension-acknowledgements.markdown */,
+				5CAA50AAF65356CCEFECEB3B8C5AC290 /* Pods-FinderToolsetExtension-acknowledgements.plist */,
+				1258EA67156D80F6AA269646AC1D6467 /* Pods-FinderToolsetExtension-dummy.m */,
+				7459ABF620F341E5BBD756407C5C4740 /* Pods-FinderToolsetExtension-Info.plist */,
+				9701728A63E4E0854E039B157171FFCC /* Pods-FinderToolsetExtension-umbrella.h */,
+				9F203EC75892A7DFB04C47F6F181A148 /* Pods-FinderToolsetExtension.debug.xcconfig */,
+				DB74CB14323B5D64273E74337A1E1EA0 /* Pods-FinderToolsetExtension.release.xcconfig */,
+			);
+			name = "Pods-FinderToolsetExtension";
+			path = "Target Support Files/Pods-FinderToolsetExtension";
+			sourceTree = "<group>";
+		};
+		E5681698000E14F1312E754960DDF996 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5D59EC48697F8D1419A8ABB00815018 /* Preferences.modulemap */,
+				A54183CC9D7653C8A15BEF2422E42798 /* Preferences-dummy.m */,
+				67FF999EC4497CED63C39D878F71FC9A /* Preferences-Info.plist */,
+				646261CB96A42A0AB7311ACAC34F7D38 /* Preferences-prefix.pch */,
+				2F7840E70F943DE8F0FB52313F42972D /* Preferences-umbrella.h */,
+				5F754CB6D4D2D1AE591957B01F416126 /* Preferences.debug.xcconfig */,
+				D7D2F82BCADFA9A89C93F1529696DB4C /* Preferences.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Preferences";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2BFB8C47636F3FC38CE2234FCD821BFB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877EC615BF32B9C9D516E7E0BBE4ECB9 /* Pods-FinderToolset-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50C7479DBB3B4AFBF1358F8153A0A98A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C5685605AAB571B346E92AA982E4AD /* Preferences-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5110083B046794DC4ADF57E0B0DC6E4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD72EA88FE33C43438AD2C51798E7A8 /* Pods-FinderToolsetHelper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1526981309E718A068FA47AD7A578C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362D7B922B9C2C323C508FCB12725CF4 /* Pods-FinderToolsetExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		080990A33C8E049DC557762B0B4240DB /* Preferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF7AB5A2ED7F06B50D5358E0408B8B0 /* Build configuration list for PBXNativeTarget "Preferences" */;
+			buildPhases = (
+				50C7479DBB3B4AFBF1358F8153A0A98A /* Headers */,
+				0652EDBBD47C8F22C675CA0C1D4E24C3 /* Sources */,
+				83DCC675CAE4EB48F677A6AA07A652C8 /* Frameworks */,
+				D398038C9325BB89A4FF78C04879DA12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Preferences;
+			productName = Preferences;
+			productReference = 6A115D5F73B04DD7F1B7818EDD9B2EF3 /* Preferences.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44F476F770AF2A5B88167D0898D90CCB /* Pods-FinderToolsetHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A608091F828488C6D21157F7AA06AD8D /* Build configuration list for PBXNativeTarget "Pods-FinderToolsetHelper" */;
+			buildPhases = (
+				5110083B046794DC4ADF57E0B0DC6E4A /* Headers */,
+				B620D8C140ABE2F9276060E2B76E2049 /* Sources */,
+				CC11C8260FBC26CD24DB05492FE52A8C /* Frameworks */,
+				18B6352C509312C956653D5E29F733BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FinderToolsetHelper";
+			productName = "Pods-FinderToolsetHelper";
+			productReference = 7CF1CB9423DC135CD3AB81F930894C14 /* Pods_FinderToolsetHelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4927D2A3AE9EBF2F09C3E3633ED5350C /* Pods-FinderToolset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E6177FA23D4BF5093DD138E1ABFA63 /* Build configuration list for PBXNativeTarget "Pods-FinderToolset" */;
+			buildPhases = (
+				2BFB8C47636F3FC38CE2234FCD821BFB /* Headers */,
+				26A946462FF16915AC47F5310C31AA15 /* Sources */,
+				CBDE96FCF2B4A45A0105FD563B16695D /* Frameworks */,
+				BA11895F5C4CFB4FABBD2DB8D79C3BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				793F46FCD806CF8C6B91ACDD7D1911F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-FinderToolset";
+			productName = "Pods-FinderToolset";
+			productReference = C22428C113A5A7698B43A3E71F172A9F /* Pods_FinderToolset.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B2D9AA084214F64F895D2AB60A7E0FE /* Pods-FinderToolsetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FEC02D043B1ABBEDFF1289FF11FAED7 /* Build configuration list for PBXNativeTarget "Pods-FinderToolsetExtension" */;
+			buildPhases = (
+				7E1526981309E718A068FA47AD7A578C /* Headers */,
+				EA68DB74F840201CE9CBF0F6050D8FBA /* Sources */,
+				C21761A07851813618236C6C2F0C891E /* Frameworks */,
+				EE948819499A54D3A71E6E6D2EB406B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FinderToolsetExtension";
+			productName = "Pods-FinderToolsetExtension";
+			productReference = CEF40890AD24649F98C9AAF6055FA3C5 /* Pods_FinderToolsetExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CFC712A0E1EE7895F78324075BC919ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4927D2A3AE9EBF2F09C3E3633ED5350C /* Pods-FinderToolset */,
+				8B2D9AA084214F64F895D2AB60A7E0FE /* Pods-FinderToolsetExtension */,
+				44F476F770AF2A5B88167D0898D90CCB /* Pods-FinderToolsetHelper */,
+				080990A33C8E049DC557762B0B4240DB /* Preferences */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18B6352C509312C956653D5E29F733BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA11895F5C4CFB4FABBD2DB8D79C3BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D398038C9325BB89A4FF78C04879DA12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE948819499A54D3A71E6E6D2EB406B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0652EDBBD47C8F22C675CA0C1D4E24C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A325B54E70CDB34367DF5ACE33D146 /* Localization.swift in Sources */,
+				E0E3CE66468295446E31F28372866456 /* PreferencePane.swift in Sources */,
+				052DFF48B54864D445EC884543F61EA8 /* Preferences-dummy.m in Sources */,
+				60D6AC3B99212F040A4BD045B1B7DCE3 /* PreferencesStyle.swift in Sources */,
+				EDA2462B04685D2BBC46D91BE7564B9C /* PreferencesStyleController.swift in Sources */,
+				86FEB1A2826393B1B6F3650EE778C5EC /* PreferencesTabViewController.swift in Sources */,
+				7FD23DD8147E1586EF1B121F368855F2 /* PreferencesWindowController.swift in Sources */,
+				73D8666B795CEA8E4C14717D8F8A963B /* SegmentedControlStyleViewController.swift in Sources */,
+				9620CFD7DD4876E61B96B0159377215C /* ToolbarItemStyleViewController.swift in Sources */,
+				A6543098065FB7C29E24719462ED3CD1 /* UserInteractionPausableWindow.swift in Sources */,
+				49F0E59AADFB6E9B91E5AF2CD00E7F3F /* util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26A946462FF16915AC47F5310C31AA15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85546503D142D6BDBB0ED6044DB69305 /* Pods-FinderToolset-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B620D8C140ABE2F9276060E2B76E2049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC3EF7CB19748537B9425599875DCAF /* Pods-FinderToolsetHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA68DB74F840201CE9CBF0F6050D8FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A9243F5D71B9A7F921AFF55B41D579 /* Pods-FinderToolsetExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		793F46FCD806CF8C6B91ACDD7D1911F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Preferences;
+			target = 080990A33C8E049DC557762B0B4240DB /* Preferences */;
+			targetProxy = EF9026949B0B9BEFBC3E149A99149525 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29CAFAC9EC1DA31DE9DA8ABDDFEE994F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7D2F82BCADFA9A89C93F1529696DB4C /* Preferences.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Preferences/Preferences-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Preferences/Preferences-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Preferences/Preferences.modulemap";
+				PRODUCT_MODULE_NAME = Preferences;
+				PRODUCT_NAME = Preferences;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2DF59036F0D5DFF507079C1BCDD171F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FCA9B300D16A12B747C873CC4D1DF9 /* Pods-FinderToolset.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolset/Pods-FinderToolset-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolset/Pods-FinderToolset.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2FB74A4BA0770AE8C044760AD3F72E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F754CB6D4D2D1AE591957B01F416126 /* Preferences.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Preferences/Preferences-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Preferences/Preferences-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Preferences/Preferences.modulemap";
+				PRODUCT_MODULE_NAME = Preferences;
+				PRODUCT_NAME = Preferences;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47B76257C445E92EB3137E174013A889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C03BE4B1D7B1E5FF61B9A2B76840974 /* Pods-FinderToolsetHelper.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolsetHelper/Pods-FinderToolsetHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolsetHelper/Pods-FinderToolsetHelper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D2053354B177D2A7D270EE3DBD44824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52BE1A545D5C1DA067B99362F45DA352 /* Pods-FinderToolsetHelper.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolsetHelper/Pods-FinderToolsetHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolsetHelper/Pods-FinderToolsetHelper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9382317ED75CFC741F429FC224405042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CBBD83752B3D82247EF0D1B587939D33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB74CB14323B5D64273E74337A1E1EA0 /* Pods-FinderToolsetExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolsetExtension/Pods-FinderToolsetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolsetExtension/Pods-FinderToolsetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0BB09659876CEEEA84608F303BC46BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F203EC75892A7DFB04C47F6F181A148 /* Pods-FinderToolsetExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolsetExtension/Pods-FinderToolsetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolsetExtension/Pods-FinderToolsetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3C1B05A3B4F33EB69CEEC933CDE7A99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E97780FCDB9DCD28F461E05EB67228 /* Pods-FinderToolset.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinderToolset/Pods-FinderToolset-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinderToolset/Pods-FinderToolset.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4DEAC9B52796426D2A37E7074A1738D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9382317ED75CFC741F429FC224405042 /* Debug */,
+				E4DEAC9B52796426D2A37E7074A1738D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF7AB5A2ED7F06B50D5358E0408B8B0 /* Build configuration list for PBXNativeTarget "Preferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB74A4BA0770AE8C044760AD3F72E89 /* Debug */,
+				29CAFAC9EC1DA31DE9DA8ABDDFEE994F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FEC02D043B1ABBEDFF1289FF11FAED7 /* Build configuration list for PBXNativeTarget "Pods-FinderToolsetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BB09659876CEEEA84608F303BC46BC /* Debug */,
+				CBBD83752B3D82247EF0D1B587939D33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A608091F828488C6D21157F7AA06AD8D /* Build configuration list for PBXNativeTarget "Pods-FinderToolsetHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2053354B177D2A7D270EE3DBD44824 /* Debug */,
+				47B76257C445E92EB3137E174013A889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E6177FA23D4BF5093DD138E1ABFA63 /* Build configuration list for PBXNativeTarget "Pods-FinderToolset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF59036F0D5DFF507079C1BCDD171F5 /* Debug */,
+				E3C1B05A3B4F33EB69CEEC933CDE7A99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
